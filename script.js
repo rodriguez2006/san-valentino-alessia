@@ -25,15 +25,3 @@ noButton.addEventListener('click', () => {
     const currentSize = parseInt(window.getComputedStyle(siButton).fontSize);
     siButton.style.fontSize = `${currentSize + 5}px`;
 });
-
-// Effetto neve/cuori cadenti
-function creaNeve() {
-    const neve = document.createElement('div');
-    neve.classList.add('neve');
-    neve.style.left = `${Math.random() * 100}vw`;
-    neve.style.animationDuration = `${Math.random() * 3 + 2}s`;
-    document.body.appendChild(neve);
-    setTimeout(() => neve.remove(), 5000);
-}
-
-setInterval(creaNeve, 300);
