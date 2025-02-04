@@ -38,13 +38,16 @@ body {
 
 .copertina h1 {
     color: white;
-    font-size: 4rem;
+    font-size: 3rem; /* Riduci la dimensione del font se necessario */
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s;
+    text-align: center; /* Centra il testo */
+    line-height: 1.5; /* Aumenta lo spazio tra le righe */
 }
 
 .copertina:hover h1 {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Effetto hover */
+    color: #ffeb3b; /* Cambia colore al passaggio del mouse */
 }
 
 .contenuto {
