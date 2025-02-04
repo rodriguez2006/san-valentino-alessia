@@ -22,4 +22,5 @@ noButton.addEventListener('click', () => {
     risposta.style.color = "red";
     const currentSize = parseInt(window.getComputedStyle(siButton).fontSize);
     siButton.style.fontSize = `${currentSize + 5}px`;
+    
 });
