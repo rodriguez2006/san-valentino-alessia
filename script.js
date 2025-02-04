@@ -3,15 +3,17 @@ const copertina = document.getElementById('copertina');
 const siButton = document.getElementById('siButton');
 const noButton = document.getElementById('noButton');
 const risposta = document.getElementById('risposta');
+const audio = document.getElementById('audio');
 
 // Apri la cartolina
 copertina.addEventListener('click', () => {
     cartolina.classList.add('aprire');
+    audio.play(); // Avvia la musica
 });
 
 // Gestione dei pulsanti
 siButton.addEventListener('click', () => {
-    risposta.textContent = "hahahahahah sapevo hai detto si al primo colpoooo ! ❤️";
+    risposta.textContent = "Grazie mille! Non vedo l'ora di passare un San Valentino indimenticabile con te! ❤️";
     risposta.style.color = "green";
     noButton.remove();
     siButton.remove();
@@ -23,24 +25,15 @@ noButton.addEventListener('click', () => {
     const currentSize = parseInt(window.getComputedStyle(siButton).fontSize);
     siButton.style.fontSize = `${currentSize + 5}px`;
 });
-const fotoContainers = document.querySelectorAll('.foto-container');
 
-fotoContainers.forEach((container, index) => {
-    container.addEventListener('mouseover', () => {
-        const messaggioSegreto = document.createElement('p');
-        messaggioSegreto.textContent = `Sei bellissima nella foto ${index + 1} ❤️`;
-        messaggioSegreto.style.color = "#e91e63";
-        messaggioSegreto.style.position = "absolute";
-        messaggioSegreto.style.bottom = "10px";
-        messaggioSegreto.style.left = "50%";
-        messaggioSegreto.style.transform = "translateX(-50%)";
-        container.appendChild(messaggioSegreto);
-    });
+// Effetto neve/cuori cadenti
+function creaNeve() {
+    const neve = document.createElement('div');
+    neve.classList.add('neve');
+    neve.style.left = `${Math.random() * 100}vw`;
+    neve.style.animationDuration = `${Math.random() * 3 + 2}s`;
+    document.body.appendChild(neve);
+    setTimeout(() => neve.remove(), 5000);
+}
 
-    container.addEventListener('mouseout', () => {
-        const messaggioSegreto = container.querySelector('p');
-        if (messaggioSegreto) {
-            container.removeChild(messaggioSegreto);
-        }
-    });
-});
+setInterval(creaNeve, 300);
