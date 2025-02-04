@@ -23,13 +23,6 @@ body {
     animation: neve 5s linear infinite;
 }
 
-.neve::before {
-    content: "❄️";
-}
-
-.cuori::before {
-    content: "❤️";
-}
 
 /* Cartolina */
 .cartolina {
