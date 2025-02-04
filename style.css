@@ -67,6 +67,9 @@ body {
     flex-direction: column;
     align-items: center;
     overflow-y: auto;
+     width: 90%; /* Larghezza più ampia */
+    max-width: 1000px; /* Aumenta la larghezza massima */
+    margin: 0 auto; /* Centra il contenuto */
 }
 
 .griglia-foto {
