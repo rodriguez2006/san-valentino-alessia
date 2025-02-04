@@ -86,8 +86,17 @@ body {
     transition: transform 0.3s;
 }
 
+.foto-container {
+    background: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: rotate(2deg);
+    transition: transform 0.3s;
+}
+
 .foto-container:hover {
-    transform: scale(1.05);
+    transform: rotate(0deg) scale(1.05);
 }
 
 .foto {
@@ -99,8 +108,6 @@ body {
     transition: filter 0.3s;
 }
 
-.foto-container:hover .foto {
-    filter: sepia(0) brightness(1); /* Torna ai colori originali al passaggio del mouse */
 }
 
 .messaggio {
@@ -163,3 +170,4 @@ button:hover {
 .cartolina.aprire .contenuto {
     transform: rotateY(0deg);
 }
+
