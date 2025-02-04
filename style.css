@@ -2,79 +2,87 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #ffebee;
-}
-
-.background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('cuori.png') repeat;
-    animation: cuori 10s linear infinite;
-    z-index: -1;
-}
-
-@keyframes cuori {
-    0% { background-position: 0 0; }
-    100% { background-position: 1000px 1000px; }
-}
-
-.container {
-    position: relative;
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    max-width: 600px;
-    margin: 50px auto;
-}
-
-h1 {
-    font-size: 2.5rem;
-    color: #e91e63;
-    margin-bottom: 20px;
-}
-
-.carousel {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
-    overflow: hidden;
+    height: 100vh;
+    background-color: #ffebee;
+}
+
+.cartolina {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    perspective: 1000px;
+}
+
+.copertina, .contenuto {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 1s;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.copertina {
+    background-color: #e91e63;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.copertina h1 {
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.contenuto {
+    background-color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foto-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.foto {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-    object-fit: cover;
-    display: none;
+.messaggio {
+    text-align: center;
 }
 
-.photo.active {
-    display: block;
-    animation: fade 2s infinite;
+.messaggio h2 {
+    color: #e91e63;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
-@keyframes fade {
-    0%, 100% { opacity: 0; }
-    50% { opacity: 1; }
-}
-
-.buttons {
-    margin: 20px 0;
+.pulsanti {
+    display: flex;
+    gap: 10px;
 }
 
 button {
     font-size: 1.2rem;
     padding: 10px 20px;
-    margin: 0 10px;
     border: none;
     border-radius: 25px;
     cursor: pointer;
@@ -97,7 +105,16 @@ button:hover {
 }
 
 #risposta {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #e91e63;
     margin-top: 20px;
+}
+
+/* Effetto apertura */
+.cartolina.aprire .copertina {
+    transform: rotateY(180deg);
+}
+
+.cartolina.aprire .contenuto {
+    transform: rotateY(0deg);
 }
