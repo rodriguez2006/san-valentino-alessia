@@ -4,12 +4,10 @@ const siButton = document.getElementById('siButton');
 const noButton = document.getElementById('noButton');
 const risposta = document.getElementById('risposta');
 
-
 // Apri la cartolina
 copertina.addEventListener('click', () => {
     cartolina.classList.add('aprire');
 });
-
 
 // Gestione dei pulsanti
 siButton.addEventListener('click', () => {
@@ -18,7 +16,6 @@ siButton.addEventListener('click', () => {
     noButton.remove();
     siButton.remove();
 });
-
 
 noButton.addEventListener('click', () => {
     risposta.textContent = "Oh no... clicca 'Sì'!";
