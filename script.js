@@ -18,7 +18,7 @@ siButton.addEventListener('click', () => {
 });
 
 noButton.addEventListener('click', () => {
-    risposta.textContent = "sei cattivaaaa pk non vuoi?????????? tiene a otro verdad????!";
+    risposta.textContent = "mmmm sei cattivaaaa pk non vuoi?????????? tiene a otro verdad????!";
     risposta.style.color = "red";
     const currentSize = parseInt(window.getComputedStyle(siButton).fontSize);
     siButton.style.fontSize = `${currentSize + 5}px`;
