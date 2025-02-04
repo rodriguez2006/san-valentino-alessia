@@ -86,10 +86,17 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    transform: rotate(-2deg); /* Inclinazione iniziale */
+    background: white; /* Sfondo bianco per l'effetto polaroid */
+    padding: 10px; /* Spaziatura interna */
+}
+
+.foto-container:nth-child(even) {
+    transform: rotate(2deg); /* Alterna l'inclinazione */
 }
 
 .foto-container:hover {
-    transform: scale(1.05); /* Effetto hover */
+    transform: rotate(0deg) scale(1.05); /* Torna dritto e si ingrandisce al passaggio del mouse */
 }
 
 .foto {
