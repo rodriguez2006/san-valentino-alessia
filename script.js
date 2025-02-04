@@ -11,14 +11,14 @@ copertina.addEventListener('click', () => {
 
 // Gestione dei pulsanti
 siButton.addEventListener('click', () => {
-    risposta.textContent = "hehehehehheheheheh hai detto siiiiiii yeeeeeeee ❤️";
+    risposta.textContent = "Grazie mille! Non vedo l'ora di passare un San Valentino indimenticabile con te! ❤️";
     risposta.style.color = "green";
     noButton.remove();
     siButton.remove();
 });
 
 noButton.addEventListener('click', () => {
-    risposta.textContent = "mmmm sei cattivaaaa pk non vuoi?????????? tiene a otro verdad????!";
+    risposta.textContent = "Mmmm sei cattivaaaa pk non vuoi?????????? Tiene a otro verdad????!";
     risposta.style.color = "red";
     const currentSize = parseInt(window.getComputedStyle(siButton).fontSize);
     siButton.style.fontSize = `${currentSize + 5}px`;
