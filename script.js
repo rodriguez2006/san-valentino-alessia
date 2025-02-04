@@ -1,32 +1,13 @@
-const messaggio = document.getElementById('messaggio');
+const cartolina = document.getElementById('cartolina');
+const copertina = document.getElementById('copertina');
 const siButton = document.getElementById('siButton');
 const noButton = document.getElementById('noButton');
 const risposta = document.getElementById('risposta');
-const audio = document.getElementById('audio');
-const photos = document.querySelectorAll('.photo');
 
-let currentPhotoIndex = 0;
-
-// Effetto di scrittura per il messaggio
-const testo = "Alessia Gallardo, vuoi essere la mia San Valentino?";
-let index = 0;
-
-function scriviMessaggio() {
-    if (index < testo.length) {
-        messaggio.textContent += testo.charAt(index);
-        index++;
-        setTimeout(scriviMessaggio, 100);
-    }
-}
-
-// Cambia foto ogni 3 secondi
-function cambiaFoto() {
-    photos[currentPhotoIndex].classList.remove('active');
-    currentPhotoIndex = (currentPhotoIndex + 1) % photos.length;
-    photos[currentPhotoIndex].classList.add('active');
-}
-
-setInterval(cambiaFoto, 3000);
+// Apri la cartolina
+copertina.addEventListener('click', () => {
+    cartolina.classList.add('aprire');
+});
 
 // Gestione dei pulsanti
 siButton.addEventListener('click', () => {
@@ -34,7 +15,6 @@ siButton.addEventListener('click', () => {
     risposta.style.color = "green";
     noButton.remove();
     siButton.remove();
-    audio.play();
 });
 
 noButton.addEventListener('click', () => {
@@ -43,7 +23,3 @@ noButton.addEventListener('click', () => {
     const currentSize = parseInt(window.getComputedStyle(siButton).fontSize);
     siButton.style.fontSize = `${currentSize + 5}px`;
 });
-
-// Avvia l'effetto di scrittura e la musica
-scriviMessaggio();
-audio.play();
