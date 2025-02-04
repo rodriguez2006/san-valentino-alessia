@@ -12,7 +12,7 @@ body {
 .cartolina {
     position: relative;
     width: 90%;
-    max-width: 800px;
+    max-width: 1000px; /* Larghezza massima della cartolina */
     height: 90vh;
     perspective: 1000px;
 }
@@ -38,26 +38,25 @@ body {
 
 .copertina h1 {
     color: white;
-    font-size: 3rem; /* Riduci la dimensione del font se necessario */
+    font-size: 3rem;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
-    text-align: center; /* Centra il testo */
-    line-height: 1.5; /* Aumenta lo spazio tra le righe */
+    transition: transform 0.3s, color 0.3s;
+    text-align: center;
+    line-height: 1.5;
+    animation: pulse 2s infinite; /* Animazione pulsante */
 }
 
 .copertina:hover h1 {
-    transform: scale(1.1); /* Effetto hover */
+    transform: scale(1.1);
     color: #ffeb3b; /* Cambia colore al passaggio del mouse */
 }
+
 @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
 }
 
-.copertina h1 {
-    animation: pulse 2s infinite; /* Animazione continua */
-}
 .contenuto {
     background-color: white;
     transform: rotateY(180deg);
@@ -67,17 +66,17 @@ body {
     flex-direction: column;
     align-items: center;
     overflow-y: auto;
-     width: 90%; /* Larghezza più ampia */
+    width: 90%; /* Larghezza più ampia */
     max-width: 1000px; /* Aumenta la larghezza massima */
     margin: 0 auto; /* Centra il contenuto */
 }
 
 .griglia-foto {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonne */
+    gap: 20px; /* Spazio tra le foto */
     margin-bottom: 20px;
-    width: 100%;
+    width: 100%; /* Occupa tutta la larghezza disponibile */
 }
 
 .foto-container {
@@ -89,17 +88,8 @@ body {
     transition: transform 0.3s;
 }
 
-.foto-container {
-    background: white;
-    padding: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: rotate(2deg);
-    transition: transform 0.3s;
-}
-
 .foto-container:hover {
-    transform: rotate(0deg) scale(1.05);
+    transform: scale(1.05); /* Effetto hover */
 }
 
 .foto {
@@ -111,6 +101,8 @@ body {
     transition: filter 0.3s;
 }
 
+.foto-container:hover .foto {
+    filter: sepia(0) brightness(1); /* Torna ai colori originali al passaggio del mouse */
 }
 
 .messaggio {
@@ -118,26 +110,21 @@ body {
     margin-top: 20px;
 }
 
-@keyframes scrivi {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
 .messaggio h2 {
-    overflow: hidden;
-    white-space: nowrap;
-    animation: scrivi 3s steps(40, end);
+    color: #e91e63;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .pulsanti {
     display: flex;
-    gap: 15px;
+    gap: 20px; /* Spazio tra i pulsanti */
     margin-top: 20px;
 }
 
 button {
-    font-size: 1.2rem;
-    padding: 10px 20px;
+    font-size: 1.5rem; /* Dimensione del testo */
+    padding: 15px 30px; /* Dimensioni dei pulsanti */
     border: none;
     border-radius: 25px;
     cursor: pointer;
@@ -173,4 +160,3 @@ button:hover {
 .cartolina.aprire .contenuto {
     transform: rotateY(0deg);
 }
-
