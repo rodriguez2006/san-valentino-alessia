@@ -3,26 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>San Valentino per Alessia</title>
+    <title>Cartolina per Alessia</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="background"></div>
-    <div class="container">
-        <h1 id="messaggio"></h1>
-        <div class="carousel">
-            <img src="foto1.jpg" alt="Foto 1" class="photo active">
-            <img src="foto2.jpg" alt="Foto 2" class="photo">
-            <img src="foto3.jpg" alt="Foto 3" class="photo">
+    <div class="cartolina" id="cartolina">
+        <div class="copertina" id="copertina">
+            <h1>Apri mi</h1>
         </div>
-        <div class="buttons">
-            <button id="siButton">Sì <i class="fas fa-heart"></i></button>
-            <button id="noButton">No <i class="fas fa-times"></i></button>
+        <div class="contenuto" id="contenuto">
+            <div class="foto-container">
+                <img src="foto1.jpg" alt="Foto 1" class="foto">
+                <img src="foto2.jpg" alt="Foto 2" class="foto">
+                <img src="foto3.jpg" alt="Foto 3" class="foto">
+                <img src="foto4.jpg" alt="Foto 4" class="foto">
+            </div>
+            <div class="messaggio">
+                <h2>Alessia Gallardo, vuoi essere la mia San Valentino?</h2>
+                <div class="pulsanti">
+                    <button id="siButton">Sì <i class="fas fa-heart"></i></button>
+                    <button id="noButton">No <i class="fas fa-times"></i></button>
+                </div>
+                <p id="risposta"></p>
+            </div>
         </div>
-        <p id="risposta"></p>
     </div>
-    <audio id="audio" src="musica.mp3" loop></audio>
     <script src="script.js"></script>
 </body>
 </html>
