@@ -10,19 +10,6 @@ body {
     overflow: hidden;
 }
 
-/* Effetto neve o cuori cadenti */
-@keyframes neve {
-    0% { transform: translateY(-10vh); }
-    100% { transform: translateY(100vh); }
-}
-
-.neve, .cuori {
-    position: absolute;
-    top: -10vh;
-    font-size: 2rem;
-    animation: neve 5s linear infinite;
-}
-
 
 /* Cartolina */
 .cartolina {
