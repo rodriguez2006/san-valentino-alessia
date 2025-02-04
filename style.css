@@ -108,10 +108,15 @@ body {
     margin-top: 20px;
 }
 
+@keyframes scrivi {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
 .messaggio h2 {
-    color: #e91e63;
-    font-size: 2rem;
-    margin-bottom: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: scrivi 3s steps(40, end);
 }
 
 .pulsanti {
