@@ -10,25 +10,29 @@
 <body>
     <div class="cartolina" id="cartolina">
         <div class="copertina" id="copertina">
-             <h1>Aprimiiii<br>sono una cartolinaaa</h1>
+            <h1>Aprimiiii<br>sono una cartolinaaa</h1>
         </div>
         <div class="contenuto" id="contenuto">
             <div class="griglia-foto">
                 <div class="foto-container">
                     <img src="foto1.jpg" alt="Foto 1" class="foto">
+                    <p class="messaggio-segreto">Sei bellissima in questa foto ❤️</p>
                 </div>
                 <div class="foto-container">
                     <img src="foto2.jpg" alt="Foto 2" class="foto">
+                    <p class="messaggio-segreto">Sei bellissima anche in questa ❤️</p>
                 </div>
                 <div class="foto-container">
                     <img src="foto3.jpg" alt="Foto 3" class="foto">
+                    <p class="messaggio-segreto">Sei bellissima pure qui ❤️</p>
                 </div>
                 <div class="foto-container">
                     <img src="foto4.jpg" alt="Foto 4" class="foto">
+                    <p class="messaggio-segreto">Sei bellissima sempre ❤️</p>
                 </div>
             </div>
             <div class="messaggio">
-                <h2>Alessia Gallardo,gupaa, hermosaaa, diosaaa vuoi essere la mia San Valentino?</h2>
+                <h2 id="testo-animato">Alessia Gallardo, vuoi essere la mia San Valentino?</h2>
                 <div class="pulsanti">
                     <button id="siButton">Sì <i class="fas fa-heart"></i></button>
                     <button id="noButton">No <i class="fas fa-times"></i></button>
@@ -37,6 +41,10 @@
             </div>
         </div>
     </div>
+    <audio id="audio" autoplay loop>
+        <source src="musica.mp3" type="audio/mpeg">
+        Il tuo browser non supporta l'elemento audio.
+    </audio>
     <script src="script.js"></script>
 </body>
 </html>
