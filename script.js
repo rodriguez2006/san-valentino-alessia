@@ -13,7 +13,7 @@ copertina.addEventListener('click', () => {
 
 // Gestione dei pulsanti
 siButton.addEventListener('click', () => {
-    risposta.textContent = "heheheheh sapevo al primo colpo hai detto SIII! ❤️";
+    risposta.textContent = "jajajajaj hai detto sii al primo colpoo! ❤️";
     risposta.style.color = "green";
     noButton.remove();
     siButton.remove();
@@ -23,5 +23,17 @@ noButton.addEventListener('click', () => {
     risposta.textContent = "Mmmm sei cattivaaaa pk non vuoi?????????? Tiene a otro verdad????!";
     risposta.style.color = "red";
     const currentSize = parseInt(window.getComputedStyle(siButton).fontSize);
-    siButton.style.fontSize = ${currentSize + 5}px;
+    siButton.style.fontSize = `${currentSize + 5}px`;
 });
+
+// Effetto neve/cuori cadenti
+function creaNeve() {
+    const neve = document.createElement('div');
+    neve.classList.add('neve');
+    neve.style.left = `${Math.random() * 100}vw`;
+    neve.style.animationDuration = `${Math.random() * 3 + 2}s`;
+    document.body.appendChild(neve);
+    setTimeout(() => neve.remove(), 5000);
+}
+
+setInterval(creaNeve, 300);
