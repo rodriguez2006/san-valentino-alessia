@@ -148,8 +148,10 @@ body {
 /* Pulsanti */
 .pulsanti {
     display: flex;
-    gap: 20px;
+    justify-content: center; /* Centra i pulsanti orizzontalmente */
+    gap: 20px; /* Spazio tra i pulsanti */
     margin-top: 20px;
+    width: 100%; /* Occupa tutta la larghezza disponibile */
 }
 
 button {
