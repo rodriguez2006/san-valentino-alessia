@@ -211,3 +211,20 @@ button:hover {
         padding: 10px 20px;
     }
 }
+/* Messaggio animato */
+#testo-animato {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: scrivi 3s steps(40, end);
+    font-size: 2rem; /* Dimensione predefinita */
+    text-align: center; /* Centra il testo */
+    line-height: 1.5; /* Aumenta lo spazio tra le righe */
+}
+
+/* Media Queries per dispositivi mobili */
+@media (max-width: 768px) {
+    #testo-animato {
+        font-size: 1.5rem; /* Riduci la dimensione del testo su dispositivi mobili */
+        white-space: normal; /* Consenti al testo di andare a capo */
+    }
+}
