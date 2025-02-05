@@ -13,7 +13,7 @@ copertina.addEventListener('click', () => {
 
 // Gestione dei pulsanti
 siButton.addEventListener('click', () => {
-    risposta.textContent = "Grazie mille! Non vedo l'ora di passare un San Valentino indimenticabile con te! ❤️";
+    risposta.textContent = "heheheheh sapevo al primo colpo hai detto SIII! ❤️";
     risposta.style.color = "green";
     noButton.remove();
     siButton.remove();
